@@ -1,7 +1,8 @@
 # MLFlow server's dockerfile
 FROM python:3.8.2-slim
 
-RUN pip install mlflow boto3 psycopg2-binary
+RUN apt-get update -y && apt-get install -y libpq-dev
+RUN pip install mlflow boto3 psycopg2
 
 ENTRYPOINT ["mlflow", "server", \
 	"-h", "0.0.0.0", \
