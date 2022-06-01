@@ -2,6 +2,7 @@
 FROM python:3.8.2-slim
 
 RUN pip install --upgrade pip
+RUN apt-get update -y && apt-get install -y libpq-dev gcc libblas-dev liblapack-dev gfortran
 RUN pip install numpy
 # RUN apt-get update -y && apt-get install -y libpq-dev gcc libblas-dev liblapack-dev gfortran
 # RUN pip install mlflow boto3 
