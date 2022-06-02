@@ -3,7 +3,7 @@ FROM python:3.8.2-slim
 
 ENV AWS_ACCESS_KEY_ID='minioadmin'
 ENV AWS_SECRET_ACCESS_KEY='verysecretpassword'
-ENV MLFLOW_S3_ENDPOINT_URL='http://172.18.121.247:9000'
+ENV MLFLOW_S3_ENDPOINT_URL='http://minio-api-mlflow.apps.ruby.edu.ihost.com'
 
 RUN pip install --upgrade pip
 RUN apt-get update -y && apt-get install -y libpq-dev gcc libblas-dev liblapack-dev gfortran g++
