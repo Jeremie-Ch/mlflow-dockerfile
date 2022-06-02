@@ -12,5 +12,6 @@ RUN pip install mlflow boto3 psycopg2
 ENTRYPOINT ["mlflow", "server", \
 	"-h", "0.0.0.0", \
 	"--artifacts-destination", "s3://ml-bucket/mlartifacts", \
-	"--serve-artifacts", "--backend-store-uri", "postgresql://jeremie:postgressecret@172.18.57.152:5432/mlflow_backend"]
+	"--serve-artifacts", \
+	"--backend-store-uri", "postgresql://jeremie:postgressecret@postgresql-mlflow.apps.ruby.edu.ihost.com/mlflow_backend"]
 
