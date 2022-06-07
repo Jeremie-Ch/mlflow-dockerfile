@@ -14,5 +14,5 @@ ENTRYPOINT ["mlflow", "server", \
 	"--artifacts-destination", "s3://ml-bucket/mlartifacts", \
 	"--serve-artifacts", \
 	"--backend-store-uri", \
-	"postgresql://jeremie:postgressecret@https://postgresql-mlflow.apps.ruby.edu.ihost.com:5432/mlflow_backend"]
+	"postgresql://jeremie:postgressecret@172.18.57.152:5432/mlflow_backend"]
 
